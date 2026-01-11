@@ -1,8 +1,5 @@
 {
-  "name": "CorpWeb Architect - 企业官网建设助手",
-  "description": "一个专业的企业官网建设指南与AI规划工具，帮助企业从零开始构建现代化官网。",
-  "requestFramePermissions": [
-    "camera",
-    "microphone"
-  ]
+  "name": "CorpWeb Architect - 企业官网建站专家",
+  "description": "基于 AI 的现代化企业官网建站规划工具。",
+  "requestFramePermissions": []
 }
