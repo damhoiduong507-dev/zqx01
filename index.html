@@ -4,36 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CorpWeb Architect - 专业企业官网建设专家</title>
+    <title>中企销数字化 - 领先的企业级数字化解决方案供应商</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- 引入 Alpine.js 用于辅助交互 -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        
+        :root {
+            --zq-blue: #0056b3;
+            --zq-dark: #003366;
+            --zq-gray: #f8f9fa;
+        }
+
         body {
-            font-family: 'Inter', 'Noto+Sans+SC', sans-serif;
+            font-family: 'Noto Sans SC', sans-serif;
             scroll-behavior: smooth;
+            color: #334155;
         }
-        .hero-gradient {
-            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+
+        /* 模拟 PHP/传统网站的平滑过渡 */
+        .page-enter {
+            animation: fadeIn 0.4s ease-out;
         }
-        .btn-primary {
-            @apply bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-all shadow-lg active:scale-95;
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--zq-blue);
+            border-radius: 10px;
+        }
+
+        .bg-zq-blue { background-color: var(--zq-blue); }
+        .text-zq-blue { color: var(--zq-blue); }
+        .border-zq-blue { border-color: var(--zq-blue); }
+        
+        .nav-link-active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--zq-blue);
         }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3"
-  }
-}
-</script>
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3"
+      }
+    }
+    </script>
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-white">
     <div id="root"></div>
 </body>
 </html>
